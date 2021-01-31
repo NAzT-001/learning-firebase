@@ -9,7 +9,8 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: "12.x"
-      - run: |
+      - name: Install cloud functions dependencies
+        run: |
           cd functions
           yarn
       - uses: w9jds/firebase-action@master
